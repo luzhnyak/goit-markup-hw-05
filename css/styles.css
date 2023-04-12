@@ -49,29 +49,19 @@ img {
 
 .link {
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover,
 .link:focus {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
 .btn:focus {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section {
@@ -199,10 +189,14 @@ img {
   content: '';
   display: block;
   width: 100%;
-  height: 3px;
+  height: 4px;
   margin-top: 20px;
   border-radius: 2px;
-  background-color: #404bbf;
+  background-color: var(--link-active-color);
+}
+
+.active {
+  color: var(--link-active-color);
 }
 
 .menu-link:hover,
@@ -286,6 +280,9 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--link-active-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ======================= /Hero section ========================== */
@@ -386,6 +383,7 @@ img {
   align-items: center;
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-svg {
@@ -395,6 +393,7 @@ img {
 .team-social-link:hover,
 .team-social-link:focus {
   background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ======================= /Team section ========================== */
@@ -427,6 +426,10 @@ img {
   border: 1px solid var(--border-light);
   border-radius: 4px;
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-menu-btn:hover,
@@ -436,6 +439,10 @@ img {
   border: 1px solid var(--link-active-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list {
@@ -514,20 +521,24 @@ img {
 }
 
 .customers-link {
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
   color: #afb1b8;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover,
 .customers-link:focus {
   border: 1px solid var(--link-active-color);
   color: var(--link-active-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-svg {
@@ -585,6 +596,7 @@ img {
 
 .footer-section .team-social-link {
   background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-section .team-social-svg {
@@ -594,6 +606,7 @@ img {
 .footer-section .team-social-link:hover,
 .footer-section .team-social-link:focus {
   background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ======================= /Footer section ========================== */
@@ -619,6 +632,9 @@ img {
   margin-right: auto;
   margin-top: 88px;
   background-color: var(--white-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   transition: scale 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -637,6 +653,19 @@ img {
   border-radius: 50%;
   color: var(--dark-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: var(--white-color);
+  background-color: var(--link-active-color);
+  border: transparent;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-modal-icon {
